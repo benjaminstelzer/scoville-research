@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-19",
+  "research_candidate": {
+    "package_sha256": "2078a61307a7055ce924e5e6db0d2ae9e959b37d769ea49f4fc1f4aff9e8c262",
+    "benchmark_lock_sha256": "32d79faf3fab757e61da14c4f0fae56660e085208e38efeac1a055e7d3da5a1f",
+    "test_seal_sha256": "3b516aecd7621c4798a4da016886e2422099bd1a95207e99ad6c85a44e2d7697",
+    "validation": {
+      "run_id": "research-v10-candidate-val-full-r1",
+      "hard": "13/13",
+      "summary_sha256": "ce06f352874239f57931255c4ea2bb5711ec3078ab13acb9ca7d88c6dcd2201c"
+    },
+    "test": {
+      "run_id": "research-v10-candidate-test-once-r1",
+      "raw_hard": "4/4",
+      "skill_hard": "4/4",
+      "summary_sha256": "54b4e6684fb9c02bf181cf2804f7255ac0ca4560bef3fd1ad7fb057bc317d2b0",
+      "retries": 0
+    },
+    "skillopt": {
+      "run_id": "research-v10-skillopt-train-r1",
+      "calls": 49,
+      "total_tokens": 2939506,
+      "proposal_sha256": "981d3a920e99db8e2921595a3f09c584fa4456bf7e79ff8c4ea7b1631725367b",
+      "proposal_validation_hard": "12/13",
+      "decision": "rejected",
+      "reason": "The proposal lost the mechanism-convergence gate and did not beat the observed 13/13 source candidate."
+    }
+  },
+  "brainstorm_candidate": {
+    "package_sha256": "fc204947ed837424b24eb2067491d2ded3126381d952ebdeaed55d3765b06d2a",
+    "benchmark_lock_sha256": "574fb7c0df508c218d9bfeb6ce1c911a16b1031c337acc1f29980d808822ed4d",
+    "test_seal_sha256": "d29ed9246fb9c56b6a09ef018d21b04c62ff376252de5443dde3ce9ba0c2016d",
+    "validation": {
+      "run_id": "brainstorm-v17-candidate-val-full-r1",
+      "hard": "6/6",
+      "summary_sha256": "cf76db4a6333e7b371e53ad68aa68bc2c1dc6d4492f5ef999ba15ade713b0c66"
+    },
+    "test": {
+      "run_id": "brainstorm-v17-candidate-test-once-r1",
+      "raw_hard": "1/3",
+      "skill_hard": "3/3",
+      "summary_sha256": "c1c64e1f8297351c51207133916f7a3e7ce3490d94cab6a0a16c3e998b79e997",
+      "retries": 0,
+      "adjudication": [
+        "The canonical negative row contradicted its boolean output type through the Studio activation-object instruction.",
+        "The standalone row bound an undisclosed mode string and exact mechanism count that neither the task nor Skill contract required."
+      ]
+    }
+  },
+  "composition": {
+    "mode": "explicit_combined",
+    "research_owns_landscape": true,
+    "native_brainstorm_landscape_dispatched": false,
+    "landscape_input_count": 1,
+    "pre_convergence_cross_visibility": false,
+    "standalone_dependency": false,
+    "global_novelty_claim": false
+  },
+  "fable_review": {
+    "model": "claude-fable-5",
+    "effort": "high",
+    "verdict": "READY",
+    "implementation_blockers": 0,
+    "test_adjudication": "1/3 raw, 3/3 skill"
+  }
+}

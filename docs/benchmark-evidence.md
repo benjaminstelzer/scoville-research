@@ -5,6 +5,36 @@ result does not prove. A clean final percentage without the discarded runs
 would be shorter. It would also remove the part that shows whether the finish
 line moved.
 
+## v1.1.0 qualification
+
+The v1.1.0 revision froze 13 Train, 13 Validation, and four fresh Test cases
+before candidate work. The exact package SHA-256 is
+`2078A61307A7055CE924E5E6DB0D2AE9E959B37D769EA49F4FC1F4AFF9E8C262`.
+
+| Run | Split | Hard result | Use |
+| --- | --- | ---: | --- |
+| `research-v10-candidate-val-full-r1` | Validation | 13/13 | Exact candidate qualification |
+| `research-v10-skillopt-train-r1` proposal | Validation selection | 12/13 | Rejected regression |
+| `research-v10-candidate-test-once-r1` | Fresh sealed Test | 4/4 | Sole authorized holdout evaluation |
+
+The deterministic artifact suite passed 35/35. The new cases cover evidence
+locators, same-source opposing evidence, Skill-byte drift, run phases, external
+job trust and cleanup, final link and content state, claim freshness, private
+query separation, isolated evidence lanes, mechanism convergence, and explicit
+Brainstorm composition.
+
+SkillOpt ran one step with 49 model calls and 2,939,506 provider tokens. Its
+proposal added a closed-corpus instruction but lost the mechanism-convergence
+gate, returning two mechanisms where the frozen contract required three. The
+observed source candidate had already passed 13/13, so the proposal was
+rejected despite SkillOpt's internal comparison against a stochastic 10/13
+baseline rerun.
+
+The fresh Test passed all four cases without retry or candidate change. Fable 5
+High then returned `READY` with no blocking implementation finding. Exact
+package, lock, seal, run-summary, SkillOpt, sibling, and review facts are bound
+in the [v1.1 qualification manifest](evidence/w006-research-brainstorm-qualification.json).
+
 ## Frozen boundary
 
 The [evaluation contract](evaluation-contract.md) froze before the first valid

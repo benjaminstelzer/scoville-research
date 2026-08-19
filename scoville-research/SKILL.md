@@ -31,6 +31,8 @@ Choose the smallest route that can answer the question:
 
 For mixed Development and Academic work, load both domain references. Deep is a persistence and rigor overlay, not a fourth subject domain.
 
+When the user explicitly requests a combined Scoville Research and Scoville Brainstorm run and both Skills are independently available and applicable, load [brainstorm-composition.md](references/brainstorm-composition.md). Treat it as an explicit composition protocol, not a new research route or an automatic sibling activation.
+
 Do not turn a request for several invented mechanisms into research merely because prior art may help; that is Brainstorm. Do not turn a request to implement the researched option into implementation unless that action is separately authorized.
 
 ## Freeze the research contract

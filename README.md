@@ -59,6 +59,12 @@ Use Scoville Research for a literature review of agentic deep-research factualit
 Use Scoville Research in Deep mode to determine whether a hybrid API and browser research agent is viable for this product. Preserve the brief, query log, source ledger, claim ledger, contradictions, and final report. Keep private project details out of public queries.
 ```
 
+When a decision also needs deliberately different candidate mechanisms, request
+Scoville Research and Scoville Brainstorm explicitly. Research then owns one
+inspected prior-art lane; Brainstorm keeps the generators isolated from that
+lane until convergence. Two landscape passes would look thorough, but mainly
+create two owners for the same evidence.
+
 Explicit `$scoville-research` invocation also works on hosts that support named
 Skill invocation.
 
@@ -77,7 +83,7 @@ The final path must end in `<skills-dir>/scoville-research/SKILL.md`. For Claude
 Code, use `~/.claude/skills/` globally or `.claude/skills/` inside one project.
 Other hosts use their supported Skills directory.
 
-**What it costs.** Research loads a 1,439-token Core. Development, Academic,
+**What it costs.** Research loads a 1,501-token Core. Development, Academic,
 and Deep references load only when their route needs them, and real research
 can use materially more time, browsing, and context than an answer without the
 Skill. That cost buys a traceable claim-evidence chain, not a larger decorative
@@ -94,6 +100,8 @@ decision. See [benchmark evidence](docs/benchmark-evidence.md).
   inherits the authority of another.
 - **Claim-level boundaries.** Reported claims, direct observations, inference,
   contradiction, and unresolved gaps remain distinguishable.
+- **Exact evidence units.** Deep claims link to inspected passages or scoped
+  observations with stable locators, not merely to an entire source.
 - **Source independence.** Ten retellings of one origin still count as one
   origin.
 - **Hostile-content resistance.** Retrieved pages, papers, issues, and tool
@@ -114,11 +122,19 @@ data boundary, discovers canonical sources, inspects the actual evidence,
 traces claims, searches for contradictions, fills the weakest remaining gap,
 and stops at decision sufficiency.
 
-Deep mode adds `brief.md`, `queries.jsonl`, `sources.jsonl`, `claims.jsonl`, and
-`REPORT.md`. The bundled standard-library validator checks their structure,
-stable identifiers, cross-references, headings, and citation IDs. It does not
-pretend that valid JSON proves truth or semantic support. The Skill installs no
-executable dependency and requires no particular research provider.
+Deep mode adds `brief.md`, `run.json`, `queries.jsonl`, `sources.jsonl`,
+`evidence.jsonl`, `claims.jsonl`, and `REPORT.md`. The run manifest binds the
+exact Skill package, phase, resume point, and optional external-job state.
+Evidence records preserve the smallest practical locator, excerpt, or scoped
+observation behind each claim. Optional source fields keep accessibility, link
+health, and content quality separate; time-sensitive claims may carry their own
+`as_of` date. None of those fields becomes a credibility score.
+
+The bundled standard-library validator checks structural integrity, Skill-byte
+continuity, state transitions, references, headings, and citation IDs without a
+network call. Legacy v1 packages remain readable and are never silently
+migrated. Valid JSON still does not prove truth or semantic support. The Skill
+installs no executable dependency and requires no particular research provider.
 
 ## Scoville family
 
@@ -142,13 +158,19 @@ needs:
 
 ## Status
 
-The release candidate passed **6/6 Validation cases**, compared with **5/6** for
-the same Terra 5.6 Medium target without a project Skill. SkillOpt proposed one
-change; it reduced the hard Validation result to **5/6** and was rejected. The
-unchanged candidate then passed **3/3 one-shot sealed holdout cases** and **8/8
-deterministic artifact-validator tests**. These results cover the frozen local
-corpus and execution boundary, not arbitrary truth, exhaustive web coverage,
-or every host and model. See [benchmark evidence](docs/benchmark-evidence.md).
+The v1.1.0 candidate passed **13/13 open Validation cases**, **4/4 one-shot
+sealed holdout cases**, and **35/35 deterministic artifact-validator tests**.
+Its frozen suite covers Deep v2, external-job boundaries, final citation state,
+private-query safety, source independence, mechanism convergence, activation
+near-misses, and the explicit Brainstorm composition. SkillOpt used 49 calls to
+propose one change; that proposal fell to **12/13** and was rejected. Fable 5
+High returned `READY` with no implementation blocker.
+
+Those results establish the frozen local corpus, package routing, and structural
+contract. They do not establish arbitrary truth, exhaustive web coverage, or
+identical behavior on every host and model. See the
+[qualification manifest](docs/evidence/w006-research-brainstorm-qualification.json)
+and [benchmark evidence](docs/benchmark-evidence.md).
 
 ## Sources
 
@@ -171,6 +193,11 @@ or every host and model. See [benchmark evidence](docs/benchmark-evidence.md).
 Every inspected source, contribution, limit, license note, publication status,
 and design claim is recorded in the
 [source and provenance audit](docs/research/source-audit.md).
+The v1.1.0 comparison against other Research Skills, services, and scholarly
+evidence is preserved separately with its
+[report](docs/research/research-skills-gap-analysis/REPORT.md),
+[27-source ledger](docs/research/research-skills-gap-analysis/sources.jsonl), and
+[32-claim ledger](docs/research/research-skills-gap-analysis/claims.jsonl).
 
 ## License
 

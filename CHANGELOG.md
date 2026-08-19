@@ -1,5 +1,31 @@
 # Changelog
 
+## 2026-08-19: Scoville Research v1.1.0
+
+### Added
+
+- Added the versioned Deep v2 package with `run.json`, `evidence.jsonl`, exact
+  claim-to-evidence links, Skill-byte drift detection, and read-only legacy-v1
+  validation.
+- Added bounded external-job records for trust boundary, cost, timeout, job
+  identity, polling, disclosed data, upload authorization, and cleanup state.
+- Added optional source accessibility, final URL, link status, and content
+  quality fields plus claim-level `as_of` dates for time-sensitive claims.
+- Added an explicit Research and Brainstorm composition protocol with one
+  Research-owned landscape lane and no automatic sibling dependency.
+- Added the complete Research-Skill gap-analysis audit with 27 inspected
+  sources and 32 claim records.
+
+### Validation
+
+- Agent Skill package and native Scoville Plan validation passed.
+- The artifact validator passed 35/35 deterministic tests.
+- The exact candidate passed 13/13 open Validation cases and 4/4 one-shot
+  sealed holdout cases under Terra 5.6 Medium.
+- SkillOpt proposed one change after 49 calls and 2,939,506 tokens; the proposal
+  passed only 12/13 Validation cases and was rejected.
+- Fable 5 High returned `READY` with no implementation blocker.
+
 ## 2026-08-19: Scoville Research v1.0.0
 
 ### Added
