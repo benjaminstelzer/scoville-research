@@ -163,8 +163,7 @@ sealed holdout cases**, and **35/35 deterministic artifact-validator tests**.
 Its frozen suite covers Deep v2, external-job boundaries, final citation state,
 private-query safety, source independence, mechanism convergence, activation
 near-misses, and the explicit Brainstorm composition. SkillOpt used 49 calls to
-propose one change; that proposal fell to **12/13** and was rejected. Fable 5
-High returned `READY` with no implementation blocker.
+propose one change; that proposal fell to **12/13** and was rejected.
 
 Those results establish the frozen local corpus, package routing, and structural
 contract. They do not establish arbitrary truth, exhaustive web coverage, or

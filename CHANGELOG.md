@@ -1,5 +1,20 @@
 # Changelog
 
+## 2026-08-19: Public validation wording (v1.1.1)
+
+### Changed
+
+- Removed external model-review approval from the public Status and release
+  history.
+- Kept the measured qualification results, evidence links, Skill package, and
+  behavior unchanged.
+
+### Validation
+
+- README and Changelog no longer publish external approval as completion
+  evidence.
+- The unchanged Agent Skill package passes canonical validation.
+
 ## 2026-08-19: Scoville Research v1.1.0
 
 ### Added
@@ -24,7 +39,6 @@
   sealed holdout cases under Terra 5.6 Medium.
 - SkillOpt proposed one change after 49 calls and 2,939,506 tokens; the proposal
   passed only 12/13 Validation cases and was rejected.
-- Fable 5 High returned `READY` with no implementation blocker.
 
 ## 2026-08-19: Scoville Research v1.0.0
 
