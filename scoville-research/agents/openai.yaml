@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scoville Research"
+  short_description: "Evidence-first deep web research"
+  default_prompt: "Use $scoville-research to investigate this question across the web, GitHub, and primary literature, then return a claim-traceable decision memo."
