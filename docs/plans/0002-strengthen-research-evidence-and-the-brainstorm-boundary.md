@@ -1,10 +1,9 @@
 ---
 format_version: 1
 id: PLAN-0002
-status: active
+status: completed
 created: 2026-08-19
 updated: 2026-08-19
-current_item: W-007
 ---
 
 # Strengthen Research evidence and the Brainstorm boundary
@@ -121,7 +120,7 @@ Evidence: [exact Research package SHA256 2078a61307a7055ce924e5e6db0d2ae9e959b37
 
 ### W-007 Publish Research and verify the independently released sibling
 
-Status: in_progress
+Status: done
 Depends on: [W-006]
 Blocked by: []
 Decisions: [ADR-0002, ADR-0003]
@@ -133,5 +132,4 @@ Steps:
 3. Read the independently published Brainstorm release and installation evidence when available.
 4. Synchronize only Research installations under this Plan.
 5. Record exact remote and installed hashes before completing PLAN-0002.
-Evidence: [User explicitly authorized publication and local Codex and Claude installation on 2026-08-19, v1.1.0 README and changelog and benchmark evidence and source audit are prepared]
-Next action: Run final release validation and inspect the complete v1.1.0 release diff before committing.
+Evidence: [User explicitly authorized publication and local Codex and Claude installation on 2026-08-19, v1.1.0 README and changelog and benchmark evidence and source audit are published, Research release commit d01f836be166d5c248e363660bfddd4f7d4f3113 and immutable v1.1.0 tag are published, GitHub Release https://github.com/benjaminstelzer/scoville-research/releases/tag/v1.1.0 is normal and non-draft, Codex and Claude Research installations each match all 7 tag files with package SHA256 2078a61307a7055ce924e5e6db0d2ae9e959b37d769ea49f4fc1f4aff9e8c262, observed Brainstorm v1.1.1 tag peels to 50c281dc5265e5aded7c8da25195a420b944dbb4, observed Codex and Claude Brainstorm installs each match all 5 tag files with package SHA256 a315fd4e93bb1453e9104e9bd367ad52ab8803bf4f67c23b2936235e1088a487]
