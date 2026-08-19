@@ -1,10 +1,9 @@
 ---
 format_version: 1
 id: PLAN-0001
-status: active
+status: completed
 created: 2026-08-19
 updated: 2026-08-19
-current_item: W-003
 ---
 
 # Build and publish Scoville Research
@@ -57,7 +56,7 @@ Evidence: [Agent Skill validation and Python compilation passed, artifact valida
 
 ### W-003 Publish and integrate the Scoville family
 
-Status: in_progress
+Status: done
 Depends on: [W-002]
 Blocked by: []
 Decisions: []
@@ -69,5 +68,4 @@ Steps:
 3. Restructure BenjaminStelzer.md into separate Codex Skills and Scoville family sections after the Skill release exists, also using `imitate-me`.
 4. Commit, push, and verify every affected repository.
 5. Record exact publication and integration evidence, then complete W-003 and PLAN-0001.
-Evidence: []
-Next action: Commit and push the verified v1.0.0 tree, then create and verify its immutable GitHub release before editing sibling Family sections or the profile repository.
+Evidence: [Research release commit 947BEE67E7AB873D4F276701EBDADE88371A7048 is published on remote main, annotated tag and normal GitHub Release v1.0.0 resolve to release commit 947BEE67E7AB873D4F276701EBDADE88371A7048, Brainstorm v1.0.5 commit 35837D87 and Code v1.0.16 commit 3ABFCECA are published with normal GitHub Releases, Handoff v2.0.6 commit 266524C8 and Plan v1.2.11 commit 3D41C58D are published with normal GitHub Releases, Scribe v1.0.16 commit E2AC3605 and UI v1.0.15 commit 572D1100 are published with normal GitHub Releases, profile v1.0.3 commit 24E08294 separates Codex Skills from the seven-Skill Scoville family, all seven remote Family sections share SHA-256 40B64C5081503B3CD7B0E596D37553C79D5D731DE0C462FF4F2ABF48041C56F1, remote main branches tags releases README blobs Skill path source audit and public metadata passed final verification]
