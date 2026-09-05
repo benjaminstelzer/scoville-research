@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "skill": "scoville-research",
+  "evidence": "Development case definitions and source-contract review only. Not executed model tests.",
+  "cases": [
+    {
+      "id": "named-report",
+      "given": "Research current options and save the report and ledgers under reports/options.",
+      "expect": [
+        "Write only the requested research artifacts at reports/options.",
+        "Keep the investigated repository read-only."
+      ]
+    },
+    {
+      "id": "chat-only-deep",
+      "given": "Conduct deep multi-source research but answer only in this chat.",
+      "expect": [
+        "Apply evidence rigor without creating a research directory or report files."
+      ]
+    },
+    {
+      "id": "durable-default-path",
+      "given": "Create a durable Deep research package. No output path is given.",
+      "expect": [
+        "Use research/<lowercase-kebab-topic>/ in the workspace.",
+        "Do not treat report permission as permission to install or edit the investigated software."
+      ]
+    },
+    {
+      "id": "legacy-migration",
+      "given": "A named research directory has legacy artifacts without run.json. The user requests an inspection.",
+      "expect": [
+        "Inspect and validate without mutation or silent migration.",
+        "A new v2 run still requires authorization for durable state."
+      ]
+    }
+  ]
+}

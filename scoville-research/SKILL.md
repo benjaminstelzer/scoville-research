@@ -15,7 +15,12 @@ Research owns question framing, source routing, retrieval strategy, claim-to-evi
 
 Family standalone: discovery does not mean installed, active, applicable, or required. If available and independently applicable, `scoville-brainstorm` owns deliberate divergence, `scoville-code-anti-ai-slop` owns engineering and proof, `scoville-ui-anti-ai-slop` owns interface work, `scoville-scribe-anti-ai-slop` owns wording and fidelity, `scoville-plan` owns durable planning records, and `scoville-handoff` owns transfer. Research may supply evidence to those tasks; it never activates or simulates them merely because they are related.
 
-Keep research read-only unless the user independently authorizes another action. Do not install, edit, message, publish, or run a proof of concept under a research request alone.
+Keep investigated systems and source material read-only. An explicit request for
+saved research artifacts authorizes writing those artifacts at the named output
+path, not changing the investigated system. For a requested durable Deep package
+without a path, use the Deep reference's workspace default. A chat-only request
+creates no files, even when research is deep. Do not install, edit source
+material, message, publish, or run a proof of concept without separate authority.
 
 ## Route the request
 

@@ -18,7 +18,7 @@ That is research slop: visible activity without a reliable evidence chain.
 The result looks researched because the source list is long, while the actual
 decision still rests on repetition, inference, or an uninspected abstract.
 
-Scoville Research is a read-only Agent Skill for current multi-source web
+Scoville Research is an Agent Skill for current multi-source web
 research, GitHub-first implementation discovery, academic literature work, and
 durable deep research. It routes each question to the evidence that can answer
 it, preserves contradictions and inspection limits, and stops when the
@@ -61,7 +61,7 @@ Use Scoville Research in Deep mode to determine whether a hybrid API and browser
 
 When a decision also needs deliberately different candidate mechanisms, request
 Scoville Research and Scoville Brainstorm explicitly. Research then owns one
-inspected prior-art lane; Brainstorm keeps the generators isolated from that
+inspected prior-art lane. Brainstorm keeps the generators isolated from that
 lane until convergence. Two landscape passes would look thorough, but mainly
 create two owners for the same evidence.
 
@@ -70,29 +70,46 @@ Skill invocation.
 
 ## Install
 
-Use an Agent Skills-compatible host and Terra 5.6 Medium or a comparably
-capable executor such as Opus 4.8. Ask the agent to install:
+### Install this Skill
+
+In a local Codex or Claude Code session, ask:
 
 ```text
-Install this Agent Skill and refresh the available Skill list:
+Install this Agent Skill for all my projects from this exact package directory:
 https://github.com/benjaminstelzer/scoville-research/tree/main/scoville-research
-Keep the installed directory name scoville-research. Use Terra 5.6 Medium or a comparably capable executor such as Opus 4.8.
+Preserve existing customizations and ask before overwriting conflicting files.
+Report the installed location and whether the host discovers the Skill.
 ```
 
-The final path must end in `<skills-dir>/scoville-research/SKILL.md`. For Claude
-Code, use `~/.claude/skills/` globally or `.claude/skills/` inside one project.
-Other hosts use their supported Skills directory.
+The agent needs source access and permission to write to its personal Skills
+location. Manual fallback: [Codex Skills guide](https://learn.chatgpt.com/docs/build-skills)
+or [Claude Code Skills guide](https://code.claude.com/docs/en/skills).
 
-**What it costs.** Research loads a 1,501-token Core. Development, Academic,
-and Deep references load only when their route needs them, and real research
-can use materially more time, browsing, and context than an answer without the
-Skill. That cost buys a traceable claim-evidence chain, not a larger decorative
-bibliography. Use it when current multi-source evidence can change a material
-decision. See [benchmark evidence](docs/benchmark-evidence.md).
+Install only the linked package for the focused option.
+
+### Install the complete Scoville suite
+
+```text
+Install the complete Scoville Skill suite for all my projects. Fetch and install every exact package directory below:
+
+https://github.com/benjaminstelzer/scoville-brainstorm/tree/main/scoville-brainstorm
+https://github.com/benjaminstelzer/scoville-research/tree/main/scoville-research
+https://github.com/benjaminstelzer/scoville-code-anti-ai-slop/tree/main/scoville-code-anti-ai-slop
+https://github.com/benjaminstelzer/scoville-design-anti-ai-slop/tree/main/scoville-design-anti-ai-slop
+https://github.com/benjaminstelzer/scoville-ui-anti-ai-slop/tree/main/scoville-ui-anti-ai-slop
+https://github.com/benjaminstelzer/scoville-scribe-anti-ai-slop/tree/main/scoville-scribe-anti-ai-slop
+https://github.com/benjaminstelzer/scoville-plan/tree/main/scoville-plan
+https://github.com/benjaminstelzer/scoville-handoff/tree/main/scoville-handoff
+
+Preserve existing customizations and ask before overwriting conflicting files. Report every installed location and whether the host discovers each Skill.
+```
 
 ## What it enforces
 
-- **The smallest sufficient route.** One known source stays a normal task;
+- **Scoped report writing.** Requested saved research artifacts may be written
+  at the agreed output path. Investigated systems and source material remain
+  read-only. Chat-only research creates no files, including in Deep mode.
+- **The smallest sufficient route.** One known source stays a normal task.
   Development, Academic, and Deep behavior load only when the question needs
   them.
 - **Evidence ownership.** Specifications own their contracts, repositories own
@@ -116,25 +133,19 @@ The complete contract is in [SKILL.md](scoville-research/SKILL.md).
 
 ## How it works
 
-A request is routed as `NO`, `GENERAL`, `DEVELOPMENT`, `ACADEMIC`, or a mixed
-route with the `DEEP` persistence overlay. The Core freezes the question and
-data boundary, discovers canonical sources, inspects the actual evidence,
-traces claims, searches for contradictions, fills the weakest remaining gap,
-and stops at decision sufficiency.
+The Core frames the question and data boundary, inspects canonical sources,
+traces claims, searches for contradictions, and stops at decision sufficiency.
+Development and Academic routes select the relevant evidence. Deep adds durable
+research artifacts only when saving them is requested.
 
-Deep mode adds `brief.md`, `run.json`, `queries.jsonl`, `sources.jsonl`,
-`evidence.jsonl`, `claims.jsonl`, and `REPORT.md`. The run manifest binds the
-exact Skill package, phase, resume point, and optional external-job state.
-Evidence records preserve the smallest practical locator, excerpt, or scoped
-observation behind each claim. Optional source fields keep accessibility, link
-health, and content quality separate; time-sensitive claims may carry their own
-`as_of` date. None of those fields becomes a credibility score.
+A saved Deep run preserves the brief, queries, sources, passage-level evidence,
+claims, contradictions, and report. The optional standard-library validator
+checks structure, references, and package continuity without a network call.
+It does not prove that a citation supports its claim. Legacy records are never
+silently migrated. See the [Deep contract](scoville-research/references/deep-research.md).
 
-The bundled standard-library validator checks structural integrity, Skill-byte
-continuity, state transitions, references, headings, and citation IDs without a
-network call. Legacy v1 packages remain readable and are never silently
-migrated. Valid JSON still does not prove truth or semantic support. The Skill
-installs no executable dependency and requires no particular research provider.
+For repository structure and development tools, see
+[maintenance notes](docs/maintenance.md).
 
 ## Scoville family
 
@@ -161,18 +172,18 @@ needs:
 
 ## Status
 
-The v1.1.0 candidate passed **13/13 open Validation cases**, **4/4 one-shot
-sealed holdout cases**, and **35/35 deterministic artifact-validator tests**.
-Its frozen suite covers Deep v2, external-job boundaries, final citation state,
-private-query safety, source independence, mechanism convergence, activation
-near-misses, and the explicit Brainstorm composition. SkillOpt used 49 calls to
-propose one change; that proposal fell to **12/13** and was rejected.
+The historical v1.1.0 candidate passed 13/13 open Validation cases, 4/4 sealed
+holdout cases, and 35 artifact-validator tests. Those scores do not qualify
+later source changes.
 
-Those results establish the frozen local corpus, package routing, and structural
-contract. They do not establish arbitrary truth, exhaustive web coverage, or
-identical behavior on every host and model. See the
-[qualification manifest](docs/evidence/w006-research-brainstorm-qualification.json)
-and [benchmark evidence](docs/benchmark-evidence.md).
+Focused Terra Medium cases on 2026-09-05 respected requested report writing and
+chat-only boundaries. One report nevertheless inferred compatibility and a
+shared numerical denominator without supporting evidence. Passing the file
+boundary is not passing the research task. The current deterministic validator
+checks structure, not factuality.
+
+See [benchmark evidence](docs/benchmark-evidence.md) and the
+[historical qualification manifest](docs/evidence/w006-research-brainstorm-qualification.json).
 
 ## Sources
 
@@ -203,4 +214,4 @@ evidence is preserved separately with its
 
 ## License
 
-MIT - see [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).

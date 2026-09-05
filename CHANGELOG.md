@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.1.2 - 2026-09-05
+
+- Shortened the README, moved contributor layout notes to docs/maintenance.md, and made agent installation the primary path. Safety and evidence limits remain explicit.
+- Added separate prompts for this Skill and the complete live-verified Scoville suite.
+- Clarified that explicitly requested saved research artifacts may be written at the agreed path while investigated systems and sources remain read-only.
+- Removed five byte-identical research working copies. The README-linked report and source ledgers remain canonical.
+- Kept chat-only Deep requests file-free and legacy artifact migration subject to authorization.
+- Included the repository license in the copied package. The existing 35 artifact-validator tests passed.
+
 ## 2026-08-19: Public validation wording (v1.1.1)
 
 ### Changed

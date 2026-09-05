@@ -4,7 +4,10 @@ Add this route when the user explicitly asks for deep, exhaustive, comprehensive
 
 ## Create durable state
 
-Use the user-specified output path or create `research/<lowercase-kebab-topic>/` in the current workspace. Every new Deep run uses the v2 package below:
+When saved artifacts are requested, use the user-specified output path or
+`research/<lowercase-kebab-topic>/` in the current workspace. The Core owns this
+narrow write authority. Deep rigor alone does not override a chat-only output
+request. Every new durable Deep run uses the v2 package below:
 
 ```text
 research/<topic>/
