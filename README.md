@@ -145,7 +145,7 @@ It does not prove that a citation supports its claim. Legacy records are never
 silently migrated. See the [Deep contract](scoville-research/references/deep-research.md).
 
 For repository structure and development tools, see
-[maintenance notes](docs/maintenance.md).
+[maintenance notes](development/docs/maintenance.md).
 
 ## Scoville family
 
@@ -182,8 +182,10 @@ shared numerical denominator without supporting evidence. Passing the file
 boundary is not passing the research task. The current deterministic validator
 checks structure, not factuality.
 
-See [benchmark evidence](docs/benchmark-evidence.md) and the
-[historical qualification manifest](docs/evidence/w006-research-brainstorm-qualification.json).
+See [benchmark evidence](development/docs/benchmark-evidence.md) and the
+[historical qualification manifest](development/docs/evidence/w006-research-brainstorm-qualification.json).
+
+Repository development and the current path mapping are in [development/](development/README.md).
 
 ## Sources
 
@@ -205,12 +207,12 @@ See [benchmark evidence](docs/benchmark-evidence.md) and the
 
 Every inspected source, contribution, limit, license note, publication status,
 and design claim is recorded in the
-[source and provenance audit](docs/research/source-audit.md).
+[source and provenance audit](development/docs/research/source-audit.md).
 The v1.1.0 comparison against other Research Skills, services, and scholarly
 evidence is preserved separately with its
-[report](docs/research/research-skills-gap-analysis/REPORT.md),
-[27-source ledger](docs/research/research-skills-gap-analysis/sources.jsonl), and
-[32-claim ledger](docs/research/research-skills-gap-analysis/claims.jsonl).
+[report](development/docs/research/research-skills-gap-analysis/REPORT.md),
+[27-source ledger](development/docs/research/research-skills-gap-analysis/sources.jsonl), and
+[32-claim ledger](development/docs/research/research-skills-gap-analysis/claims.jsonl).
 
 ## License
 

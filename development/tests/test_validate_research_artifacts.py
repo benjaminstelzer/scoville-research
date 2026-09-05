@@ -8,7 +8,7 @@ import unittest
 from pathlib import Path
 
 
-SCRIPT = Path(__file__).parents[1] / "scoville-research" / "scripts" / "validate_research_artifacts.py"
+SCRIPT = Path(__file__).parents[2] / "scoville-research" / "scripts" / "validate_research_artifacts.py"
 SPEC = importlib.util.spec_from_file_location("validate_research_artifacts", SCRIPT)
 MODULE = importlib.util.module_from_spec(SPEC)
 assert SPEC and SPEC.loader
