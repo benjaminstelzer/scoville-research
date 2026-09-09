@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Document host and tool requirements in the README compatibility block, matching the Skill frontmatter.
+
 - Added the `compatibility` frontmatter field declaring host and tool requirements. No behavior change.
 - This metadata edit changes `skill_sha256` for running Deep research runs; the hash change is expected.
 
