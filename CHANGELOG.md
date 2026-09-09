@@ -1,6 +1,10 @@
 # Changelog
 
-## Unreleased
+## v1.1.4 - 2026-09-09
+
+- Document capacity-bound optional evidence lanes and semantic closure checks without assuming that interruption or archiving frees a subagent slot.
+- Keep status questions inside the active run and report material blockers immediately.
+- Align compatibility metadata with the existing capacity policy. A missing close control does not itself force solo execution when optional lanes still fit.
 
 - Document host and tool requirements in the README compatibility block, matching the Skill frontmatter.
 
