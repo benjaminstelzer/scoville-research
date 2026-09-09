@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Added the `compatibility` frontmatter field declaring host and tool requirements. No behavior change.
+- This metadata edit changes `skill_sha256` for running Deep research runs; the hash change is expected.
+
 ## v1.1.3 - 2026-09-05
 
 - Move repository development into `development/` and keep the installable Skill in its own top-level directory.

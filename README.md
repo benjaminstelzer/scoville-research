@@ -170,6 +170,17 @@ needs:
 - [Handoff](https://github.com/benjaminstelzer/scoville-handoff) transfers active
   work to another agent or session.
 
+## Current Codex lifecycle limitation
+
+On 2026-09-09, the tested Codex Desktop tool surface exposed no control whose
+documented semantics close a completed subagent thread and free its slot. Other
+Codex hosts may expose an equivalent control under a different name. Research
+therefore discovers lifecycle controls by documented behavior, reports unavailable
+cleanup before delegation, skips optional evidence lanes that do not fit, and
+blocks a required composed lane when capacity is insufficient. Interrupting,
+archiving, deleting a task, or killing a process is not assumed to free a
+subagent slot.
+
 ## Status
 
 The historical v1.1.0 candidate passed 13/13 open Validation cases, 4/4 sealed
