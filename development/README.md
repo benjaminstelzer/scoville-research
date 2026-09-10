@@ -1,23 +1,17 @@
 # Development
 
-The only installable Skill source is [`scoville-research/`](../scoville-research/).
-This directory owns repository development and is not an installation package.
+The only installable package is [`scoville-research/`](../scoville-research/). Artifact-validator tests in this directory are not installed with the Skill.
 
-## Current layout
+## Validate
 
-Paths recorded before the 2026-09-05 structure change are historical. Use this mapping
-for current local files; frozen evidence retains its original contents and hashes.
+Run the deterministic artifact suite from the repository root:
 
-| Former repository path | Current repository path |
-| --- | --- |
-| `docs` | `development/docs` |
-| `tests` | `development/tests` |
-| `PROJECT_INDEX.md` | `development/PROJECT_INDEX.md` |
+```text
+python -B -m unittest discover -s development/tests -v
+```
 
-Run development commands from this directory unless the command specifies otherwise.
-The installable package is one directory above. Tests, when present, run with
-`python -B -m unittest discover -s tests` in the existing development environment.
-This move does not add dependencies or establish new model or host qualification.
+Also check Skill frontmatter, UI metadata, package links, and the boundary with Scoville Brainstorm. Structural validation does not establish factual correctness, source quality, or citation support in a live research result.
 
-The native planning root is this directory: [`PROJECT_INDEX.md`](PROJECT_INDEX.md),
-`docs/plans/` and `docs/decisions/` moved together.
+## Retention
+
+Keep current validator tests and this maintenance summary. Create research corpora, claim ledgers, queries, fetched sources, model outputs, audits, and reviews in temporary storage. Retain evaluation evidence only as a concise repository-owned summary when a published release links it.

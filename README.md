@@ -148,8 +148,7 @@ checks structure, references, and package continuity without a network call.
 It does not prove that a citation supports its claim. Legacy records are never
 silently migrated. See the [Deep contract](scoville-research/references/deep-research.md).
 
-For repository structure and development tools, see
-[maintenance notes](development/docs/maintenance.md).
+Repository validation and retention rules are in [development](development/README.md).
 
 ## Scoville family
 
@@ -187,20 +186,10 @@ subagent slot.
 
 ## Status
 
-The historical v1.1.0 candidate passed 13/13 open Validation cases, 4/4 sealed
-holdout cases, and 35 artifact-validator tests. Those scores do not qualify
-later source changes.
-
-Focused Terra Medium cases on 2026-09-05 respected requested report writing and
-chat-only boundaries. One report nevertheless inferred compatibility and a
-shared numerical denominator without supporting evidence. Passing the file
-boundary is not passing the research task. The current deterministic validator
-checks structure, not factuality.
-
-See [benchmark evidence](development/docs/benchmark-evidence.md) and the
-[historical qualification manifest](development/docs/evidence/w006-research-brainstorm-qualification.json).
-
-Repository development and the current path mapping are in [development/](development/README.md).
+The repository retains deterministic artifact-validator tests. Historical
+model runs are summarized in the changelog and do not qualify later source
+changes. Structural validation does not establish factual correctness, source
+quality, or citation support in a live research result.
 
 ## Sources
 
@@ -219,15 +208,6 @@ Repository development and the current path mapping are in [development/](develo
 - [Beyond Browsing](https://aclanthology.org/2025.findings-acl.577/) and
   [FS-Researcher](https://aclanthology.org/2026.acl-long.288/) for structured
   evidence interfaces and durable filesystem state.
-
-Every inspected source, contribution, limit, license note, publication status,
-and design claim is recorded in the
-[source and provenance audit](development/docs/research/source-audit.md).
-The v1.1.0 comparison against other Research Skills, services, and scholarly
-evidence is preserved separately with its
-[report](development/docs/research/research-skills-gap-analysis/REPORT.md),
-[27-source ledger](development/docs/research/research-skills-gap-analysis/sources.jsonl), and
-[32-claim ledger](development/docs/research/research-skills-gap-analysis/claims.jsonl).
 
 ## License
 
