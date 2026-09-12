@@ -1,39 +1,23 @@
 # Scoville Research
 
-More links are easy. Better evidence is not.
+A source list can look convincing while the answer rests on very little. Five
+articles may repeat the same press release. A real citation may concern the
+right topic without supporting the sentence attached to it.
 
-It usually looks harmless:
+Scoville Research follows claims back to the evidence that can answer the
+question. It covers current web research, GitHub-first implementation discovery,
+academic literature and longer investigations that need saved records. It
+keeps contradictions and gaps visible and stops when another search would no
+longer change the decision.
 
-- Six articles confirm a release claim. Five copied the sixth, which copied the
-  press release.
-- A paper reports a strong benchmark result, so the method is called
-  production-ready before anyone checks the repository, license, or missing
-  implementation pieces.
-- A citation is real, current, and topically relevant. It still does not
-  support the sentence attached to it.
-- One retrieved page contains instructions for the agent. Apparently the web
-  has promoted itself to project owner.
-
-That is research slop: visible activity without a reliable evidence chain.
-The result looks researched because the source list is long, while the actual
-decision still rests on repetition, inference, or an uninspected abstract.
-
-Scoville Research is an Agent Skill for current multi-source web
-research, GitHub-first implementation discovery, academic literature work, and
-durable deep research. It routes each question to the evidence that can answer
-it, preserves contradictions and inspection limits, and stops when the
-remaining uncertainty is visible and another query would not change the
-decision.
-
-Do not use it for one known page or paper summary, an ordinary repository
-inspection, pure brainstorming, planning, implementation, or wording work.
+Use it for questions that need several sources examined together. A summary of
+one known page or paper, ordinary repository inspection, brainstorming,
+implementation or wording work belongs with the corresponding task.
 
 ## Why "Scoville"?
 
 The family is named for useful signal that remains detectable after dilution.
-Research accumulates pages quickly. Its useful heat is the smaller evidence
-chain that survives source tracing, contradiction search, and an honest check
-of what was actually inspected.
+In Research, that means tracing a claim back through its retellings to the evidence that supports it.
 
 ## How to use
 
@@ -62,8 +46,7 @@ Use Scoville Research in Deep mode to determine whether a hybrid API and browser
 When a decision also needs deliberately different candidate mechanisms, request
 Scoville Research and Scoville Brainstorm explicitly. Research then owns one
 inspected prior-art lane. Brainstorm keeps the generators isolated from that
-lane until convergence. Two landscape passes would look thorough, but mainly
-create two owners for the same evidence.
+lane until convergence. This avoids researching the same landscape twice.
 
 Explicit `$scoville-research` invocation also works on hosts that support named
 Skill invocation.
@@ -130,8 +113,7 @@ Preserve existing customizations and ask before overwriting conflicting files. R
 - **Private/public separation.** Local or private material does not enter an
   external query unless the user explicitly authorizes that disclosure.
 - **A decision stop.** Research ends when the decision-relevant evidence is
-  sufficient or the remaining gap is explicit. More tabs are not promoted to
-  rigor by seniority.
+  sufficient or the remaining gap is explicit.
 
 The complete contract is in [SKILL.md](scoville-research/SKILL.md).
 
@@ -148,23 +130,19 @@ checks structure, references, and package continuity without a network call.
 It does not prove that a citation supports its claim. Legacy records are never
 silently migrated. See the [Deep contract](scoville-research/references/deep-research.md).
 
-Repository validation and retention rules are in [development](development/README.md).
-
 ## How it was developed
 
-I developed Research through source inspection, research tasks, artifact tests
-and model evaluations. [Earlier SkillOpt runs](https://github.com/benjaminstelzer/scoville-research/blob/8777b872c64a45db4703591ba777c567a457228b/CHANGELOG.md)
-produced proposals that lost required validation cases, so those changes were
-rejected. Optimization is part of development, not a reason to accept weaker
-evidence handling.
+I developed Research through source inspection, research tasks and model
+evaluations. The difficult part is often the connection between a claim and
+its source. A relevant link can still support a different statement, and
+several agreeing pages may all repeat the same origin.
 
-In real use, I analyze complete task histories to see whether claims reach
-their actual sources, where research loses its boundary, and where repeated
-queries spend tokens without changing the answer. Those findings guide
-revisions and focused checks. The [changelog](CHANGELOG.md) follows changes
-to claim-level evidence, saved research and task capacity. Structural tests
-check the records, while the support for a research claim still has to be
-judged from its sources.
+I read complete research histories to see where that connection breaks, where
+the question loses its scope and where more queries stop changing the answer.
+Those observations guide the revisions in the [changelog](CHANGELOG.md).
+[SkillOpt proposals](https://github.com/benjaminstelzer/scoville-research/blob/8777b872c64a45db4703591ba777c567a457228b/CHANGELOG.md)
+that lost required cases were rejected. Reducing the instructions would not
+help if the research became less reliable.
 
 ## Scoville family
 
@@ -199,13 +177,6 @@ cleanup before delegation, skips optional evidence lanes that do not fit, and
 blocks a required composed lane when capacity is insufficient. Interrupting,
 archiving, deleting a task, or killing a process is not assumed to free a
 subagent slot.
-
-## Status
-
-The repository retains deterministic artifact-validator tests. Historical
-model runs are summarized in the changelog and do not qualify later source
-changes. Structural validation does not establish factual correctness, source
-quality, or citation support in a live research result.
 
 ## Sources
 

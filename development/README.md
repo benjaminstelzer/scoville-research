@@ -14,4 +14,6 @@ Review the boundary with Scoville Brainstorm. Structural validation does not est
 
 ## Retention
 
-Keep current validator tests and this maintenance summary. Create research corpora, claim ledgers, queries, fetched sources, model outputs, audits, and reviews in temporary storage. Retain evaluation evidence only as a concise repository-owned summary when a published release links it.
+Keep current validator tests and this maintenance summary. Create research corpora, claim ledgers, queries, fetched sources, model outputs, audits, and reviews in temporary storage. Retain a concise evaluation summary only when it explains a useful result or
+development lesson and a published release links it. Routine checks and
+inconclusive miniature runs stay temporary.
