@@ -10,7 +10,7 @@ Run the deterministic artifact suite from the repository root:
 python -B -m unittest discover -s development/tests -v
 ```
 
-Also check Skill frontmatter, UI metadata, package links, and the boundary with Scoville Brainstorm. Structural validation does not establish factual correctness, source quality, or citation support in a live research result.
+Review the boundary with Scoville Brainstorm. Structural validation does not establish factual correctness, source quality, or citation support in a live research result.
 
 ## Retention
 

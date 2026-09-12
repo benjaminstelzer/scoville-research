@@ -150,6 +150,22 @@ silently migrated. See the [Deep contract](scoville-research/references/deep-res
 
 Repository validation and retention rules are in [development](development/README.md).
 
+## How it was developed
+
+I developed Research through source inspection, research tasks, artifact tests
+and model evaluations. [Earlier SkillOpt runs](https://github.com/benjaminstelzer/scoville-research/blob/8777b872c64a45db4703591ba777c567a457228b/CHANGELOG.md)
+produced proposals that lost required validation cases, so those changes were
+rejected. Optimization is part of development, not a reason to accept weaker
+evidence handling.
+
+In real use, I analyze complete task histories to see whether claims reach
+their actual sources, where research loses its boundary, and where repeated
+queries spend tokens without changing the answer. Those findings guide
+revisions and focused checks. The [changelog](CHANGELOG.md) follows changes
+to claim-level evidence, saved research and task capacity. Structural tests
+check the records, while the support for a research claim still has to be
+judged from its sources.
+
 ## Scoville family
 
 Each Skill works independently. Combine only the concerns the task actually
